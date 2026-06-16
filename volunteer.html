@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Become Volunteer | NayePankh Foundation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Put this between your existing Navbar and Footer -->
+
+    <style>
+        :root {
+            --primary: #173d7a;
+            --accent: #4d8df0;
+            --light: #eef3fb;
+        }
+
+        /* HERO */
+
+        .volunteer-hero {
+            background: linear-gradient(135deg, #173d7a, #21488a);
+            color: white;
+            text-align: center;
+            padding: 130px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .volunteer-hero::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .06);
+            top: -140px;
+            left: -140px;
+        }
+
+        .volunteer-hero::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .06);
+            bottom: -140px;
+            right: -140px;
+        }
+
+        .volunteer-hero h1 {
+            font-size: 72px;
+            font-family: Georgia, serif;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .volunteer-hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* COMMON */
+
+        .section {
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #dfe6f2;
+            top: -140px;
+            left: -140px;
+        }
+
+        .section::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #dfe6f2;
+            bottom: -140px;
+            right: -140px;
+        }
+
+
+        /* WHY VOLUNTEER */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+
+        .card-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-box i {
+            font-size: 55px;
+            color: #4d8df0;
+            margin-bottom: 20px;
+        }
+
+        .card-box h4 {
+            color: #173d7a;
+            margin-bottom: 15px;
+        }
+
+        /* BENEFITS */
+
+        .benefits {
+            background: linear-gradient(135deg, #173d7a, #21488a);
+            color: white;
+        }
+
+        .benefits::before,
+        .benefits::after {
+            background: rgba(255, 255, 255, .06);
+        }
+
+        .benefits .section-title {
+            color: white;
+        }
+
+        .benefit-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-card {
+            width: 260px;
+            min-height: 190px;
+
+            background: white;
+            color: #173d7a;
+
+            border-radius: 24px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            transition: .3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .benefit-card i {
+            color: #4d8df0;
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .benefit-card i {
+            color: #4d8df0;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* =========================
+   JOIN OUR TEAM SECTION
+========================= */
+
+        .form-section {
+            background: linear-gradient(135deg, #173d7a, #21488a);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-section::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .06);
+            top: -140px;
+            left: -140px;
+        }
+
+        .form-section::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .06);
+            bottom: -140px;
+            right: -140px;
+        }
+
+        .form-section .section-title {
+            color: white;
+            text-align: center;
+            font-size: 60px;
+            font-family: Georgia, serif;
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+
+        /* =========================
+   FORM CARD
+========================= */
+
+        .volunteer-form {
+            max-width: 1000px;
+            margin: auto;
+
+            background: white;
+
+            padding: 60px;
+
+            border-radius: 35px;
+
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+
+            position: relative;
+            z-index: 2;
+        }
+
+        /* =========================
+   TWO COLUMN ROWS
+========================= */
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+   INPUTS
+========================= */
+
+        .volunteer-form input,
+        .volunteer-form select,
+        .volunteer-form textarea {
+            width: 100%;
+
+            border: none;
+
+            background: #f5f8ff;
+
+            padding: 18px 20px;
+
+            border-radius: 15px;
+
+            font-size: 16px;
+
+            color: #555;
+
+            margin-bottom: 20px;
+
+            transition: .3s;
+        }
+
+        .volunteer-form input:focus,
+        .volunteer-form select:focus,
+        .volunteer-form textarea:focus {
+            outline: none;
+
+            background: white;
+
+            box-shadow: 0 0 0 3px rgba(77, 141, 240, .15);
+        }
+
+        .volunteer-form textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .btn-wrapper {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .volunteer-btn {
+            background: #173d7a;
+            color: white;
+
+            border: none;
+            border-radius: 50px;
+
+            padding: 18px 60px;
+
+            min-width: 320px;
+
+            font-size: 18px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            position: static;
+            /* IMPORTANT */
+            transform: none;
+            /* IMPORTANT */
+            margin: 0 auto;
+
+            box-shadow: 0 10px 25px rgba(23, 61, 122, .25);
+
+            transition: .3s;
+        }
+
+        .volunteer-btn:hover {
+            background: #4d8df0;
+        }
+
+        /* =========================
+   MOBILE
+========================= */
+
+        @media(max-width:768px) {
+
+            .volunteer-form {
+                padding: 30px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-section .section-title {
+                font-size: 42px;
+            }
+
+            .volunteer-btn {
+                width: 100%;
+                min-width: unset;
+            }
+
+        }
+
+        .success-icon {
+            font-size: 70px;
+            color: #4d8df0;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            background: #173d7a;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 50px;
+        }
+
+        .close-btn:hover {
+            background: #4d8df0;
+            color: white;
+        }
+
+        /* ===================================
+   PREMIUM VOLUNTEER HEADINGS
+=================================== */
+
+.section-title{
+    text-align:center;
+    font-family:Georgia, serif;
+    font-size:3.5rem;
+    font-style:italic;
+    font-weight:700;
+    line-height:1.1;
+    margin-bottom:40px;
+
+    background:linear-gradient(
+        90deg,
+        #173d7a 0%,
+        #173d7a 45%,
+        #4d8df0 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+@media(max-width:768px){
+    .section-title{
+        font-size:2.5rem;
+    }
+}
+
+/* WHITE VERSION FOR DARK BACKGROUNDS */
+
+.benefits .section-title,
+.form-section .section-title{
+
+    background:linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #ffffff 55%,
+        #9fc4ff 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+}
+
+/* HERO */
+
+.volunteer-hero h1{
+
+    font-family:Georgia, serif;
+
+    font-size:5.8rem;
+
+    font-style:italic;
+
+    font-weight:700;
+
+    color:white;
+
+    margin-bottom:20px;
+}
+
+@media(max-width:768px){
+
+    .section-title{
+        font-size:3rem;
+    }
+
+    .volunteer-hero h1{
+        font-size:3rem;
+    }
+}
+/* GLOBAL SECTION HEADINGS */
+
+.section-title,
+.about-title,
+.contact-title,
+.team-title,
+.program-title{
+
+    font-family:Georgia, serif;
+
+    font-size:5.5rem;
+
+    font-style:italic;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+    margin-bottom:30px;
+
+    color:#173d7a;
+}
+
+.section-title em,
+.about-title em,
+.contact-title em,
+.team-title em,
+.program-title em{
+
+    color:#4d8df0;
+
+    font-style:italic;
+}
+    </style>
+</head>
+
+<body>
+    <!-- ══════════════ NAVBAR ══════════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
+
+            <a href="index.html" class="navbar-brand custom-logo">
+                <i class="fas fa-feather-alt"></i>
+
+                <div class="logo-text">
+                    <span class="logo-main">NayePankh</span>
+                    <span class="logo-sub">FOUNDATION</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#programs">Programs</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a class="nav-link nav-btn" href="donate.html">Donate Now</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="volunteer-hero">
+        <div class="container text-center">
+            <h1>Become A Volunteer</h1>
+            <p>
+                Join NayePankh Foundation and help create meaningful change
+                through education, empowerment and community service.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHY VOLUNTEER -->
+    <section class="section">
+        <div class="container">
+
+            <h2 class="section-title" style="color:#173d7a;">
+                Why <em>Volunteer</em>?
+            </h2>
+
+            <div class="cards">
+
+                <div class="card-box">
+                    <i class="fas fa-book"></i>
+                    <h4>Education Support</h4>
+                    <p>Help children learn and grow through educational initiatives.</p>
+                </div>
+
+                <div class="card-box">
+                    <i class="fas fa-heart"></i>
+                    <h4>Community Service</h4>
+                    <p>Create meaningful impact and contribute towards social welfare.</p>
+                </div>
+
+                <div class="card-box">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Personal Growth</h4>
+                    <p>Develop leadership, teamwork and communication skills.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BENEFITS -->
+    <section class="section benefits">
+        <div class="container">
+
+            <h2 class="section-title">Volunteer <em>Benefits</em></h2>
+
+            <div class="benefit-grid">
+
+              <div class="benefit-card">
+    <i class="fas fa-award"></i>
+    <h3>01</h3>
+    <p>Certificate of Appreciation</p>
+</div>
+
+<div class="benefit-card">
+    <i class="fas fa-users"></i>
+    <h3>02</h3>
+    <p>Networking Opportunities</p>
+</div>
+
+<div class="benefit-card">
+    <i class="fas fa-star"></i>
+    <h3>03</h3>
+    <p>Leadership Experience</p>
+</div>
+
+<div class="benefit-card">
+    <i class="fas fa-globe"></i>
+    <h3>04</h3>
+    <p>Community Impact</p>
+</div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WHAT YOU LEARN -->
+    <section class="section journey-section">
+
+        <div class="container">
+
+            <h2 class="section-title" style="color:#173d7a;">
+                Your <em>Volunteer</em> Journey
+            </h2>
+
+            <div class="benefit-grid">
+<div class="benefit-card">
+    <i class="fas fa-file-signature"></i>
+    <h3>01</h3>
+    <p>Apply</p>
+</div>
+
+<div class="benefit-card">
+    <i class="fas fa-users"></i>
+    <h3>02</h3>
+    <p>Connect</p>
+</div>
+
+<div class="benefit-card">
+    <i class="fas fa-handshake"></i>
+    <h3>03</h3>
+    <p>Participate</p>
+</div>
+
+<div class="benefit-card">
+    <i class="fas fa-star"></i>
+    <h3>04</h3>
+    <p>Create Impact</p>
+</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FORM -->
+    <section class="section form-section">
+
+        <div class="container">
+
+            <h2 class="section-title">Join Our <em>Team</em></h2>
+
+            <form id="volunteerForm" class="volunteer-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+
+                <div class="form-row">
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="text" placeholder="City">
+                </div>
+
+                <div class="form-row">
+                    <select required>
+                        <option value="" disabled selected>Select Occupation</option>
+                        <option>Student</option>
+                        <option>Teacher</option>
+                        <option>Working Professional</option>
+                        <option>Business Owner</option>
+                        <option>Freelancer</option>
+                        <option>Social Worker</option>
+                        <option>Homemaker</option>
+                        <option>Retired</option>
+                        <option>Other</option>
+                    </select>
+
+                    <input type="number" placeholder="Age">
+                </div>
+
+                <textarea rows="4" placeholder="Why do you want to volunteer with NayePankh Foundation?"
+                    required></textarea>
+
+                <select>
+                    <option selected disabled>
+                        Which area interests you?
+                    </option>
+
+                    <option>Education Support</option>
+                    <option>Community Service</option>
+                    <option>Women Empowerment</option>
+                    <option>Health Awareness</option>
+                    <option>Environmental Initiatives</option>
+                </select>
+
+                <select>
+                    <option selected disabled>
+                        Weekly Availability
+                    </option>
+
+                    <option>1-2 Hours</option>
+                    <option>3-5 Hours</option>
+                    <option>5-10 Hours</option>
+                    <option>10+ Hours</option>
+                </select>
+
+                <select>
+                    <option selected disabled>
+                        Previous Volunteering Experience?
+                    </option>
+
+                    <option>Yes</option>
+                    <option>No</option>
+                </select>
+
+                <textarea rows="4" placeholder="What skills would you like to contribute?"></textarea>
+
+                <textarea rows="4" placeholder="What do you hope to learn from this experience?"></textarea>
+
+                <textarea rows="4" placeholder="Anything else you would like us to know?">
+</textarea>
+
+                <div class="btn-wrapper">
+
+                    <button type="submit" class="volunteer-btn">
+
+                        Join As Volunteer
+
+                    </button>
+
+                </div>
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- SUCCESS MODAL -->
+    <div class="modal fade" id="successModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-body text-center p-5">
+
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+                    <h2>Application Submitted!</h2>
+
+                    <p>
+                        Thank you for applying to become a volunteer at
+                        <strong>NayePankh Foundation</strong>.
+                    </p>
+
+                    <p>
+                        Our team will review your application and send
+                        further details to your email address shortly.
+                    </p>
+                    <button class="btn close-btn" data-bs-dismiss="modal">
+
+                        Continue
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <!-- Logo Column -->
+                <div class="footer-col logo-col">
+
+                    <div class="footer-brand">
+                        <i class="fas fa-feather-alt"></i>
+
+                        <div>
+                            <h3 class="footer-logo">NayePankh</h3>
+                            <span class="footer-logo-sub">FOUNDATION</span>
+                        </div>
+                    </div>
+
+                    <p class="footer-desc">
+                        Giving wings to dreams through education,
+                        empowerment and community service.
+                    </p>
+
+                </div>
+
+                <!-- Follow -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Follow Us</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="http://www.instagram.com/nayepankhfoundation"><i class="fab fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/nayepankh"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@nayepankhfoundation"><i class="fab fa-youtube"></i>
+                                YouTube</a></li>
+                        <li><a href="http://www.facebook.com/nayepankhfoundation"><i class="fab fa-facebook"></i>
+                                Facebook</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Information -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Information</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="contact.html"><i class="fas fa-address-card"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-undo"></i> Refund Policy</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Contact</h5>
+
+                    <div class="footer-contact-info">
+
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            104A/279. P Road, Kanpur.<br>
+                            Uttar Pradesh, India
+                        </div>
+
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            contact@nayepankh.com
+                        </div>
+
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            +91 8318500748
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                © 2026 NayePankh Foundation • Empowering Communities • Inspiring Change
+            </div>
+
+    </footer>
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        document.getElementById("volunteerForm").addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            if (this.checkValidity()) {
+
+                const modal = new bootstrap.Modal(
+                    document.getElementById("successModal")
+                );
+
+                modal.show();
+
+                this.reset();
+
+            } else {
+
+                this.reportValidity();
+
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NayePankh Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+    <!-- ══════════════ NAVBAR ══════════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
+
+            <!-- Logo -->
+            <a href="./index.html" class="navbar-brand custom-logo">
+                <i class="fas fa-feather-alt"></i>
+
+                <div class="logo-text">
+                    <span class="logo-main">NayePankh</span>
+                    <span class="logo-sub">FOUNDATION</span>
+                </div>
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#programs">Programs</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a class="nav-link nav-btn" href="donate.html">Donate Now</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a href="contact.html" class="contact-circle">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="8000">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <!-- Banner 1 -->
+            <div class="carousel-item active">
+                <video class="d-block w-100 banner-video" autoplay muted playsinline preload="auto">
+                    <source src="images/banner1.mp4" type="video/mp4">
+                </video>
+
+                <div class="hero-content">
+                    <p class="hero-tagline" style="margin-top: 20px;">
+                        Join us in creating opportunities, hope and lasting change.
+                    </p>
+
+                    <a href="volunteer.html" class="hero-btn">
+                        Become A Volunteer
+                    </a>
+                </div>
+
+            </div> <!-- MISSING DIV WAS HERE -->
+
+            <!-- Banner 2 -->
+            <div class="carousel-item">
+                <video class="d-block w-100 banner-video" autoplay muted playsinline preload="auto">
+                    <source src="images/banner2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- Banner 3 -->
+            <div class="carousel-item">
+                <video class="d-block w-100 banner-video" autoplay muted playsinline preload="auto">
+                    <source src="images/banner3.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+        <button class="carousel-control-prev custom-arrow" type="button" data-bs-target="#heroCarousel"
+            data-bs-slide="prev">
+
+            <i class="fas fa-chevron-left"></i>
+
+        </button>
+
+        <button class="carousel-control-next custom-arrow" type="button" data-bs-target="#heroCarousel"
+            data-bs-slide="next">
+
+            <i class="fas fa-chevron-right"></i>
+
+        </button>
+
+    </div>
+
+
+
+
+
+<section class="about-section" id="about">
+
+    <div class="about-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="about-image">
+            <img src="images/about.png" alt="NayePankh Foundation">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="about-content">
+
+            <span class="section-tag">✦ WHO WE ARE</span>
+
+            <h2 class="about-title">
+                Giving Wings To Dreams
+            </h2>
+
+            <!-- Registration Badges -->
+            <div class="org-badges-about">
+
+                <div class="org-badge-about">
+                    <i class="fas fa-landmark"></i>
+                    <span>UP Govt Registered NGO</span>
+                </div>
+
+                <div class="org-badge-about">
+                    <i class="fas fa-award"></i>
+                    <span>80G Certified</span>
+                </div>
+
+                <div class="org-badge-about">
+                    <i class="fas fa-file-signature"></i>
+                    <span>12A Registered</span>
+                </div>
+
+            </div>
+
+            <p>
+                NayePankh Foundation was initiated to bring change and support
+                communities during the challenging COVID-19 pandemic.
+            </p>
+
+            <p>
+                Today, NayePankh Foundation works towards uplifting
+                underprivileged communities through educational support,
+                food distribution, clothing drives and community programs.
+            </p>
+
+            <div class="about-tags">
+                <span>✓ Education & Literacy</span>
+                <span>✓ Women Empowerment</span>
+                <span>✓ Skill Development</span>
+                <span>✓ Health & Nutrition</span>
+                <span>✓ Environmental Care</span>
+            </div>
+
+            <!-- HIGHLIGHTS INSIDE ABOUT CONTENT -->
+
+            <div class="about-highlight">
+
+                <div class="highlight-box">
+                    <h4>🎓 Education For Every Child</h4>
+                    <p>
+                        Supporting underprivileged children through learning programs,
+                        mentorship and access to quality education.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>👩 Women Empowerment</h4>
+                    <p>
+                        Helping women build confidence, develop skills and create
+                        sustainable opportunities for a brighter future.
+                    </p>
+                </div>
+
+                <div class="highlight-box">
+                    <h4>🌱 Community Development</h4>
+                    <p>
+                        Working closely with local communities to create meaningful
+                        and lasting social impact.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="initiatives-section">
+
+        <span class="section-eyebrow">
+            ✦ OUR INITIATIVES
+        </span>
+
+        <h2>
+            Creating Change,
+            <span>One Community At A Time</span>
+        </h2>
+
+        <p>
+            Through education, empowerment, healthcare, sustainability and
+            community engagement, NayePankh Foundation works towards building
+            a brighter and more inclusive future for every individual.
+        </p>
+
+
+
+    </section>
+
+    <!-- ══════════════ CAROUSEL 2: PROGRAMS ══════════════ -->
+    <section id="programs">
+
+        <section class="carousel-section-2">
+            <div class="container">
+
+
+                <div class="text-center mb-5">
+                    <span class="section-eyebrow">✦ WHAT WE DO</span>
+                    <h2 class="section-title">
+                        Our Core <em>Programs</em>
+                    </h2>
+                </div>
+
+                <div class="programs-grid">
+
+                    <div class="program-card">
+
+                        <a href="education.html" class="program-link">
+
+                            <div class="program-icon">📚</div>
+
+                            <h4>Shiksha Daan</h4>
+
+                            <p>
+                                Providing free coaching, books and educational support
+                                to underprivileged children.
+                            </p>
+
+                            <span class="program-tag">Education</span>
+
+                        </a>
+
+                    </div>
+
+                    <div class="program-card">
+                        <a href="women.html" class="program-link">
+                            <div class="program-icon">👩‍💼</div>
+                            <h4>Shakti Saksham</h4>
+                            <p>
+                                Empowering women through skill development,
+                                awareness and livelihood opportunities.
+                            </p>
+                            <span class="program-tag">Women Empowerment</span>
+                        </a>
+                    </div>
+
+                    <div class="program-card">
+                        <a href="environmental.html" class="program-link">
+                            <div class="program-icon">🌱</div>
+                            <h4>Harit Bhavishya</h4>
+                            <p>
+                                Plantation drives, environmental awareness
+                                and sustainable community initiatives.
+                            </p>
+                            <span class="program-tag">Environment</span>
+                        </a>
+                    </div>
+
+                    <div class="program-card">
+                        <a href="health.html" class="program-link">
+                            <div class="program-icon">🏥</div>
+                            <h4>Arogya Seva</h4>
+                            <p>
+                                Health camps, nutrition support and
+                                healthcare awareness programs.
+                            </p>
+                            <span class="program-tag">Health</span>
+                        </a>
+                    </div>
+
+                    <div class="program-card">
+                        <a href="technology.html" class="program-link">
+                            <div class="program-icon">💻</div>
+                            <h4>Digital Udaan</h4>
+                            <p>
+                                Digital literacy and technology access
+                                for youth and underserved communities.
+                            </p>
+                            <span class="program-tag">Technology</span>
+                        </a>
+                    </div>
+
+                    <div class="program-card">
+                        <a href="community.html" class="program-link">
+                            <div class="program-icon">🤝</div>
+                            <h4>Sahyog Network</h4>
+                            <p>
+                                Connecting volunteers and communities
+                                to create meaningful social impact.
+                            </p>
+                            <span class="program-tag">Community</span>
+                        </a>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <section class="volunteer-section">
+            <div class="container">
+
+                <div class="text-center mb-5">
+                    <span class="section-eyebrow" style="color: white;">✦ GET INVOLVED</span>
+                    <h2 class="section-title">
+                        Your Volunteer <em>Journey</em>
+                    </h2>
+
+                    <p class="volunteer-subtitle">
+                        Becoming a changemaker is simple. Follow these steps and start creating impact.
+                    </p>
+                </div>
+
+                <div class="journey-wrapper">
+
+                    <div class="journey-card">
+                        <div class="journey-number">1</div>
+                        <h4>Apply</h4>
+                        <p>Fill out the volunteer registration form and tell us about your interests.</p>
+                    </div>
+
+                    <div class="journey-line"></div>
+
+                    <div class="journey-card">
+                        <div class="journey-number">2</div>
+                        <h4>Connect</h4>
+                        <p>Attend an orientation session and meet fellow volunteers.</p>
+                    </div>
+
+                    <div class="journey-line"></div>
+
+                    <div class="journey-card">
+                        <div class="journey-number">3</div>
+                        <h4>Participate</h4>
+                        <p>Join programs, events and community initiatives that match your passion.</p>
+                    </div>
+
+                    <div class="journey-line"></div>
+
+                    <div class="journey-card">
+                        <div class="journey-number">4</div>
+                        <h4>Create Impact</h4>
+                        <p>Help transform lives through education, empowerment and outreach.</p>
+                    </div>
+
+                </div>
+<div class="volunteer-note">
+
+    <p>
+        Ready to make a difference? Join our volunteer community and
+        help create lasting impact across education, empowerment,
+        health and sustainability initiatives.
+    </p>
+
+    <a href="volunteer.html" class="cta-btn-secondary">
+        <i class="fas fa-hands-helping"></i>
+        Become A Volunteer
+    </a>
+
+</div>
+
+
+            </div>
+        </section>
+
+
+   <!-- ══════════════ IMPACT SECTION ══════════════ -->
+
+<section class="impact-section">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <span class="section-eyebrow">
+                ✦ OUR IMPACT
+            </span>
+
+            <h2 class="impact-title">
+                NayePankh <em>Growth Journey</em>
+            </h2>
+
+            <p class="impact-subtitle">
+                From a small initiative in 2021 to a growing movement
+                of volunteers, donors and community impact.
+            </p>
+
+        </div>
+
+        <div class="impact-counters">
+
+            <div class="counter-card">
+                <h3>5000+</h3>
+                <span>Lives Impacted</span>
+            </div>
+
+            <div class="counter-card">
+                <h3>120+</h3>
+                <span>Volunteers</span>
+            </div>
+
+            <div class="counter-card">
+                <h3>50+</h3>
+                <span>Campaigns</span>
+            </div>
+
+            <div class="counter-card">
+                <h3>4+</h3>
+                <span>Years of Service</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <section class="mission-section">
+
+        <div class="container">
+
+            <div class="mission-content">
+
+                <div class="mission-icon">
+                    <i class="fas fa-people-group"></i>
+                </div>
+
+                <div class="mission-right">
+
+                    <span class="section-eyebrow">
+                        ✦ OUR MISSION
+                    </span>
+
+                    <h2>
+                        Small Acts Create
+                        <span>Big Change</span>
+                    </h2>
+
+
+
+                    <p>
+                        At NayePankh Foundation, we believe every child deserves
+                        education, every woman deserves opportunity, and every
+                        community deserves hope. Through compassion, action and
+                        collective effort, we work towards building a future where
+                        everyone has the chance to grow, learn and thrive.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ══════════════ HOW WE CHANGE LIVES ══════════════ -->
+
+    <section class="change-lives-section">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <span class="section-eyebrow">✦ WHAT WE DO</span>
+
+                <h2 class="section-title">
+                    How We <em>Change Lives</em>
+                </h2>
+
+
+                <p class="change-subtitle">
+                    Through education, nutrition and empowerment,
+                    we help individuals and communities build a better future.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Education -->
+
+                <div class="col-lg-4">
+
+                    <div class="life-card">
+
+                        <div class="life-image">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+
+                        <h3>Education Support</h3>
+
+                        <p>
+                            We provide notebooks, textbooks, school supplies and
+                            learning resources to children from underserved
+                            communities. Through tutoring sessions, reading
+                            programs and digital learning initiatives, we help
+                            young minds stay in school and unlock their full
+                            potential.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Nutrition -->
+
+                <div class="col-lg-4">
+
+                    <div class="life-card">
+
+                        <div class="life-image">
+                            <i class="fas fa-heart"></i>
+                        </div>
+
+                        <h3>Nutrition & Care</h3>
+
+                        <p>
+                            Healthy children learn better. Our nutrition drives
+                            provide snacks, meals and healthcare awareness
+                            programs that improve well-being and support healthy
+                            growth. We ensure that children receive the care
+                            they need to thrive.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Women -->
+
+                <div class="col-lg-4">
+
+                    <div class="life-card">
+
+                        <div class="life-image">
+                            <i class="fas fa-hands-holding-circle"></i>
+                        </div>
+
+                        <h3>Women Empowerment</h3>
+
+                        <p>
+                            We support women through sanitary hygiene
+                            initiatives, vocational training, financial literacy
+                            programs and skill-building workshops. These efforts
+                            promote confidence, independence and sustainable
+                            livelihoods for women.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="testimonial-section">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <span class="section-eyebrow">✦ TESTIMONIALS</span>
+
+                <h2 class="section-title">
+                    Voices Of <em>Change</em>
+                </h2>
+
+
+
+                <p class="testimonial-subtitle">
+                    Stories from volunteers and supporters who joined our mission.
+                </p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+
+                        <p>
+                            Working with NayePankh was an unforgettable experience.
+                            Seeing children smile after receiving books and school
+                            supplies reminded me how powerful small acts of kindness can be.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <h4>Rakhi Nehate</h4>
+                            <span>Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+
+                        <p>
+                            The team genuinely cares about people.
+                            Every activity is organised with passion and purpose.
+                            It was inspiring to be part of something meaningful.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <h4>Jagrut Nemade</h4>
+                            <span>Supporter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+
+                        <p>
+                            The women's workshops were incredibly motivating.
+                            Watching participants gain confidence and learn new skills
+                            showed the real impact of community support.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <h4>Kashish Shimpi</h4>
+                            <span>Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+
+                        <p>
+                            Every event is filled with positivity and compassion.
+                            NayePankh creates an environment where everyone feels valued.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <h4>Mansi Hiwale</h4>
+                            <span>Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+
+                        <p>
+                            Volunteering here taught me the importance of giving back.
+                            Even a few hours of service can make someone's day brighter.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <h4>Sahil Nehate</h4>
+                            <span>Supporter</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="testimonial-card">
+                        <div class="quote-icon">❝</div>
+
+                        <p>
+                            The education and nutrition initiatives are making a real difference.
+                            It's inspiring to see the foundation helping communities grow stronger.
+                        </p>
+
+                        <div class="testimonial-user">
+                            <h4>Aditya Dhumal</h4>
+                            <span>Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= CTA ================= -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <span class="cta-eyebrow">
+                ✦ JOIN THE MOVEMENT
+            </span>
+
+            <h2 class="cta-title">
+                Together We Can Create
+                <em>New Possibilities</em>
+            </h2>
+
+            <p class="cta-text">
+                Every contribution matters. Whether you volunteer, donate,
+                mentor a child or simply spread awareness, you become part
+                of a movement creating meaningful and lasting change.
+            </p>
+
+            <div class="cta-buttons">
+
+                <a href="donate.html" class="cta-btn-primary">
+                    Donate Now
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <!-- Logo Column -->
+                <div class="footer-col logo-col">
+
+                    <div class="footer-brand">
+                        <i class="fas fa-feather-alt"></i>
+
+                        <div>
+                            <h3 class="footer-logo">NayePankh</h3>
+                            <span class="footer-logo-sub">FOUNDATION</span>
+                        </div>
+                    </div>
+
+                    <p class="footer-desc">
+                        Giving wings to dreams through education,
+                        empowerment and community service.
+                    </p>
+
+                </div>
+
+                <!-- Follow -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Follow Us</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="http://www.instagram.com/nayepankhfoundation"><i class="fab fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/nayepankh"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@nayepankhfoundation"><i class="fab fa-youtube"></i>
+                                YouTube</a></li>
+                        <li><a href="http://www.facebook.com/nayepankhfoundation"><i class="fab fa-facebook"></i>
+                                Facebook</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Information -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Information</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="contact.html"><i class="fas fa-address-card"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-undo"></i> Refund Policy</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Contact</h5>
+
+                    <div class="footer-contact-info">
+
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            104A/279. P Road, Kanpur.<br>
+                            Uttar Pradesh, India
+                        </div>
+
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            contact@nayepankh.com
+                        </div>
+
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            +91 8318500748
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                © 2026 NayePankh Foundation • Empowering Communities • Inspiring Change
+            </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

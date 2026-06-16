@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | NayePankh Foundation</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: #eef3fb;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Georgia, serif;
+        }
+
+        .payment-section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .payment-card {
+            width: 100%;
+            max-width: 550px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-card::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #dfe6f2;
+            top: -140px;
+            left: -140px;
+        }
+
+        .payment-card::after {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: #dfe6f2;
+            bottom: -140px;
+            right: -140px;
+        }
+
+        .payment-card * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .payment-icon {
+            text-align: center;
+            font-size: 55px;
+            color: #4d8df0;
+        }
+
+        .payment-card h2 {
+            text-align: center;
+            color: #173d7a;
+            font-size: 48px;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .payment-card p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .pay-method {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f5f8ff;
+            padding: 16px;
+            border-radius: 14px;
+            margin-bottom: 12px;
+            cursor: pointer;
+        }
+
+        .pay-method i {
+            color: #4d8df0;
+        }
+
+        .form-control {
+            margin-top: 12px;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .proceed-btn {
+            width: 100%;
+            border: none;
+            background: #173d7a;
+            color: white;
+            padding: 15px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .proceed-btn:hover {
+            background: #4d8df0;
+        }
+
+        .modal-content {
+            border: none;
+            border-radius: 25px;
+        }
+
+        .modal-icon,
+        .success-icon {
+            font-size: 70px;
+            color: #4d8df0;
+            margin-bottom: 15px;
+        }
+
+        .modal-content h2 {
+            color: #173d7a;
+            font-style: italic;
+        }
+
+        .confirm-btn,
+        .close-btn {
+            background: #173d7a;
+            color: white;
+        }
+
+        .confirm-btn:hover,
+        .close-btn:hover {
+            background: #4d8df0;
+            color: white;
+        }
+
+        .cancel-btn {
+            background: #eceff5;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ══════════════ NAVBAR ══════════════ -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
+
+            <a href="index.html" class="navbar-brand custom-logo">
+                <i class="fas fa-feather-alt"></i>
+
+                <div class="logo-text">
+                    <span class="logo-main">NayePankh</span>
+                    <span class="logo-sub">FOUNDATION</span>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#programs">Programs</a>
+                    </li>
+
+                    <li class="nav-item ms-2">
+                        <a class="nav-link nav-btn" href="#">Donate Now</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="payment-section">
+
+        <div class="payment-card">
+
+
+            <div class="payment-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+
+            <h2>Payment</h2>
+
+            <p>Choose your preferred donation method.</p>
+
+            <label class="pay-method">
+                <input type="radio" name="payment" value="upi" checked>
+                <i class="fas fa-mobile-alt"></i>
+                UPI Payment
+            </label>
+
+            <label class="pay-method">
+                <input type="radio" name="payment" value="card">
+                <i class="fas fa-credit-card"></i>
+                Credit / Debit Card
+            </label>
+
+            <label class="pay-method">
+                <input type="radio" name="payment" value="razor">
+                <i class="fas fa-shield-alt"></i>
+                Razorpay Secure Checkout
+            </label>
+
+            <!-- UPI -->
+
+            <div id="upiSection">
+
+                <select class="form-control">
+
+                    <option>Google Pay</option>
+                    <option>PhonePe</option>
+                    <option>Paytm</option>
+
+                </select>
+
+                <input type="text" class="form-control" placeholder="Enter UPI ID">
+
+            </div>
+
+            <!-- CARD -->
+
+            <div id="cardSection" style="display:none;">
+
+                <input type="text" class="form-control" placeholder="Card Holder Name">
+
+                <input type="text" class="form-control" placeholder="Card Number">
+
+                <div class="row">
+
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="MM/YY">
+                    </div>
+
+                    <div class="col-6">
+                        <input type="password" class="form-control" placeholder="CVV">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- RAZORPAY -->
+
+            <div id="razorSection" style="display:none;">
+
+                <div class="alert alert-primary mt-3">
+
+                    <i class="fas fa-shield-alt"></i>
+                    Razorpay Secure Payment Gateway
+
+                </div>
+
+            </div>
+
+            <button class="proceed-btn" data-bs-toggle="modal" data-bs-target="#confirmModal">
+
+                Proceed To Payment
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+    <!-- CONFIRM MODAL -->
+
+    <div class="modal fade" id="confirmModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-body text-center p-5">
+
+                    <div class="modal-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+
+                    <h2>Proceed To Payment?</h2>
+
+                    <p>
+                        You are about to continue to the secure donation gateway.
+                    </p>
+
+                    <button class="btn cancel-btn" data-bs-dismiss="modal">
+                        Cancel </button>
+
+                    <button class="btn confirm-btn" onclick="openSuccess()">
+                        Proceed </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SUCCESS MODAL -->
+
+    <div class="modal fade" id="successModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-body text-center p-5">
+
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+                    <h2>Payment Successful</h2>
+
+                    <p>
+                        Thank you for supporting
+                        <strong>NayePankh Foundation</strong>.
+                    </p>
+
+                    <p>
+                        Your contribution helps create
+                        positive change in communities.
+                    </p>
+
+                    <button class="btn close-btn" data-bs-dismiss="modal">
+                        Continue </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-top">
+
+                <!-- Logo Column -->
+                <div class="footer-col logo-col">
+
+                    <div class="footer-brand">
+                        <i class="fas fa-feather-alt"></i>
+
+                        <div>
+                            <h3 class="footer-logo">NayePankh</h3>
+                            <span class="footer-logo-sub">FOUNDATION</span>
+                        </div>
+                    </div>
+
+                    <p class="footer-desc">
+                        Giving wings to dreams through education,
+                        empowerment and community service.
+                    </p>
+
+                </div>
+
+                <!-- Follow -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Follow Us</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="http://www.instagram.com/nayepankhfoundation"><i class="fab fa-instagram"></i>
+                                Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/nayepankh"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a></li>
+                        <li><a href="https://www.youtube.com/@nayepankhfoundation"><i class="fab fa-youtube"></i>
+                                YouTube</a></li>
+                        <li><a href="http://www.facebook.com/nayepankhfoundation"><i class="fab fa-facebook"></i>
+                                Facebook</a></li>
+                    </ul>
+                </div>
+
+                <!-- Information -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Information</h5>
+
+                    <ul class="footer-links">
+                        <li><a href="contact.html"><i class="fas fa-address-card"></i> Contact Us</a></li>
+                        <li><a href="#"><i class="fas fa-user-shield"></i> Privacy Policy</a></li>
+                        <li><a href="#"><i class="fas fa-file-contract"></i> Terms & Conditions</a></li>
+                        <li><a href="#"><i class="fas fa-undo"></i> Refund Policy</a></li>
+                    </ul>
+
+                </div>
+
+                <!-- Contact -->
+                <div class="footer-col">
+
+                    <h5 class="footer-heading">Contact</h5>
+
+                    <div class="footer-contact-info">
+
+                        <div>
+                            <i class="fas fa-map-marker-alt"></i>
+                            104A/279. P Road, Kanpur.<br>
+                            Uttar Pradesh, India
+                        </div>
+
+                        <div>
+                            <i class="fas fa-envelope"></i>
+                            contact@nayepankh.com
+                        </div>
+
+                        <div>
+                            <i class="fas fa-phone"></i>
+                            +91 8318500748
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-bottom">
+                © 2026 NayePankh Foundation • Empowering Communities • Inspiring Change
+            </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const radios =
+            document.querySelectorAll('input[name="payment"]');
+
+        const upi =
+            document.getElementById('upiSection');
+
+        const card =
+            document.getElementById('cardSection');
+
+        const razor =
+            document.getElementById('razorSection');
+
+        radios.forEach(radio => {
+
+            radio.addEventListener('change', () => {
+
+                upi.style.display = 'none';
+                card.style.display = 'none';
+                razor.style.display = 'none';
+
+                if (radio.value === 'upi')
+                    upi.style.display = 'block';
+
+                if (radio.value === 'card')
+                    card.style.display = 'block';
+
+                if (radio.value === 'razor')
+                    razor.style.display = 'block';
+
+            });
+
+        });
+
+        function openSuccess() {
+
+            const confirmModal =
+                bootstrap.Modal.getInstance(
+                    document.getElementById('confirmModal')
+                );
+
+            confirmModal.hide();
+
+            const successModal =
+                new bootstrap.Modal(
+                    document.getElementById('successModal')
+                );
+
+            successModal.show();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
